@@ -25,10 +25,10 @@ ggplot(remove_outlier, aes(x=variable, y=value)) +
   geom_boxplot(aes(fill=type)) + 
   ggtitle("Total Number of Capital Letters by Email Type")
 
-boxplot.stats(remove_outlier$value[remove_outlier$type=="spam"])
+boxplot.stats(remove_outlier$value[remove_outlier$type=="spam"])$stats
 # lower whisker, 1st quartile, median, 3rd quartile, upper whisker 
 
-boxplot.stats(remove_outlier$value[remove_outlier$type=="nonspam"])
+boxplot.stats(remove_outlier$value[remove_outlier$type=="nonspam"])$stats
 # lower whisker, 1st quartile, median, 3rd quartile, upper whisker 
 
 # Fit a model
